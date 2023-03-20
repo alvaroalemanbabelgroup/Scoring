@@ -10,9 +10,15 @@ import service.PersonaService;
 public class PersonaController {
 
     private PersonaService personaService;
+    @GetMapping("{id}")
+    public ResponseEntity<String> encuentraPersona(@PathVariable int id){
+        personaService.getPersona(id);
+        return ResponseEntity.ok("OK persona");
+    }
     @PostMapping("")
-    public ResponseEntity<Object> addPersona(@ModelAttribute("persona") Persona persona){
-        return personaService.addPersona(persona);
+    public ResponseEntity<String> addPersona(@RequestBody Persona persona){
+        personaService.insertarPersona(persona);
+        return ResponseEntity.ok("ok");
     }
 
 }
