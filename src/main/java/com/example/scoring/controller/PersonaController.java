@@ -1,9 +1,9 @@
-package controller;
+package com.example.scoring.controller;
 
-import models.Persona;
+import com.example.scoring.models.Persona;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.PersonaService;
+import com.example.scoring.service.PersonaService;
 
 @RestController
 @RequestMapping("/persona")

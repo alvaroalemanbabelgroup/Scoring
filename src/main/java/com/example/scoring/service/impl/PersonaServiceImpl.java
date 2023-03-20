@@ -1,13 +1,12 @@
-package service.impl;
+package com.example.scoring.service.impl;
 
-import mapper.PersonaMapper;
-import models.Direccion;
-import models.Persona;
-import models.Telefono;
+import com.example.scoring.service.PersonaService;
+import com.example.scoring.mapper.PersonaMapper;
+import com.example.scoring.models.Persona;
+import com.example.scoring.models.Telefono;
 import org.springframework.stereotype.Service;
-import service.PersonaService;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 @Service
 public class PersonaServiceImpl implements PersonaService {
     private final PersonaMapper personaMapper;
@@ -16,6 +15,7 @@ public class PersonaServiceImpl implements PersonaService {
         this.personaMapper = personaMapper;
     }
 
+    @Transactional
     public void insertarPersona(Persona persona){
         personaMapper.addDireccion(persona.getDireccion_domicilio_id());
         personaMapper.addDireccion(persona.getDireccion_notificacion_id());

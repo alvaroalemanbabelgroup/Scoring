@@ -1,6 +1,6 @@
-package service;
+package com.example.scoring.service;
 
-import models.Persona;
+import com.example.scoring.models.Persona;
 
 
 public interface PersonaService {

@@ -1,13 +1,11 @@
-package mapper;
+package com.example.scoring.mapper;
 
-import models.Direccion;
-import models.Persona;
-import models.Telefono;
+import com.example.scoring.models.Direccion;
+import com.example.scoring.models.Persona;
+import com.example.scoring.models.Telefono;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-
-import java.util.List;
 
 @Mapper
 public interface PersonaMapper {
@@ -24,6 +22,7 @@ public interface PersonaMapper {
             "VALUES (#{direccion_id},#{tipo_via_id},#{nombre_calle},#{num},#{piso},#{puerta}," +
             "#{escalera},#{otro_dato},#{cod_postal},#{municipio},#{cod_provincia})")
     void addDireccion(Direccion direccion);
+
 
     @Insert("INSERT INTO SCORING.TELEFONO_CONTACTO (TELEFONO_ID, PERSONA_ID,TELEFONO) " +
             "VALUES (#{telefono_id},#{persona_id},#{telefono})")
