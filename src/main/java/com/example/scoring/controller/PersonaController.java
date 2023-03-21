@@ -22,7 +22,8 @@ public class PersonaController {
     @PostMapping("/persona")
     ResponseEntity addPersona(@RequestBody Persona persona){
         this.personaService.insertarPersona(persona);
-        return ResponseEntity.ok(persona);
+       // return ResponseEntity.ok(persona);
+        return ResponseEntity.ok(String.format("Persona añadida con Id: %d", persona.getPersona_id()));
     }
 
 }

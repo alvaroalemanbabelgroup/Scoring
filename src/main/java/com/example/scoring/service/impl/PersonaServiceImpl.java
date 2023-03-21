@@ -4,7 +4,6 @@ import com.example.scoring.mapper.DireccionMapper;
 import com.example.scoring.service.PersonaService;
 import com.example.scoring.mapper.PersonaMapper;
 import com.example.scoring.models.Persona;
-import com.example.scoring.models.Telefono;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
