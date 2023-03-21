@@ -4,6 +4,6 @@ import com.example.scoring.models.Persona;
 
 
 public interface PersonaService {
-    void insertarPersona(Persona persona);
+    Persona insertarPersona(Persona persona);
     Persona getPersona(int personaId);
 }

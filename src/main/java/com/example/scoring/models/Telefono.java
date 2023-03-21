@@ -10,10 +10,10 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 public class Telefono {
-    @NotNull
+
     private int telefonoId;
-    @NotNull
+
     private int personaId;
-    @NotNull
+
     private String telefono;
 }
