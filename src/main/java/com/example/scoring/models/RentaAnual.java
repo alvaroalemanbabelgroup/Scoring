@@ -11,11 +11,11 @@ import java.util.Date;
 public class RentaAnual {
     private int renta_id;
     private int persona_id;
-    private int profesion_id;
+    private Profesion profesion;
     private int anio;
     private int importe;
     private int is_cuenta_propia;
     private String iae;
-    private String cif_empleado;
-    private Date fecha_inicio_empleado;
+    private String cif_empleador;
+    private Date fecha_inicio_empleo;
 }
